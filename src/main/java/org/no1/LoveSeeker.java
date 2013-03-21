@@ -16,13 +16,18 @@ public class LoveSeeker {
     FileReader in = null;
     LineNumberReader lnr = null;
 
+    String key = "あい"; //$NON-NLS-1$
+
     try {
       in = new FileReader("test.txt");
       lnr = new LineNumberReader(in);
       String line;
 
       while ((line = lnr.readLine()) != null) {
-        System.out.println(line);
+        if (line.contains(key)) {
+          System.out.println(lnr.getLineNumber() + "行目");
+          System.out.println(line);
+        }
       }
     } catch (FileNotFoundException e) {
       throw new RuntimeException(e);
