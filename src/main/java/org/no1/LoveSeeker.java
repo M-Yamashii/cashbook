@@ -25,7 +25,7 @@ public class LoveSeeker {
 
       while ((line = lnr.readLine()) != null) {
         if (line.contains(key)) {
-          System.out.println(lnr.getLineNumber() + "行目");
+          System.out.println(lnr.getLineNumber() + "行目"); //$NON-NLS-1$
           System.out.println(line);
         }
       }
